@@ -15,7 +15,7 @@ async fn main() -> WebDriverResult<()> {
 
     let default_id: u64 = 364614;
 
-    let random_wait_time = (5000,10000); 
+    let random_wait_time = (1000,1500); 
     let mut wait_time: u64 = rng.gen_range(&random_wait_time.0, &random_wait_time.1); // current wait time
     let error_wait_time: u64 = 10000; //time it waits on error
 
@@ -45,7 +45,7 @@ async fn main() -> WebDriverResult<()> {
     .read_line(&mut username)
     .expect("Failed to read line");
 
-    println!("Please enter your password:");
+    println!("Please enter your cumword:");
     let mut password = String::new();
     io::stdin()
     .read_line(&mut password)
